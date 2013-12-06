@@ -39,6 +39,7 @@
 			this.$elements = $(elements)
 			this.options = options
 			this.before = this.options.before || this.before
+      this.closemenu = this.options.closemenu || this.closemenu			
 			this.onItem = this.options.onItem || this.onItem
 			if (this.options.target)
 				this.$elements.attr('data-target',this.options.target)
