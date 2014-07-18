@@ -116,6 +116,10 @@
 
 			var $target = $(this.$elements.attr('data-target'));
 			$target.off('.context.data-api');
+			this.closemenu = null;
+			this.before    = null;
+			this.onItem    = null;
+			this.options   = null;
 		}
 
 		,getMenu: function () {
