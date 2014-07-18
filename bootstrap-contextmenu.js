@@ -39,7 +39,7 @@
 			this.$elements = $(elements)
 			this.options = options
 			this.before = this.options.before || this.before
-      this.closemenu = this.options.closemenu || this.closemenu			
+      this.closeMenu = this.options.closeMenu || this.closeMenu
 			this.onItem = this.options.onItem || this.onItem
 			if (this.options.target)
 				this.$elements.attr('data-target',this.options.target)
@@ -76,7 +76,7 @@
 			return false;
 		}
 
-		,closemenu: function(e) {
+		,closeMenu: function(e) {
 			this.getMenu().removeClass('open');
 		}
 
@@ -93,7 +93,7 @@
 			this.$elements
 					.on('contextmenu.context.data-api', $.proxy(this.show, this));
 			$('html')
-					.on('click.context.data-api', $.proxy(this.closemenu, this));
+					.on('click.context.data-api', $.proxy(this.closeMenu, this));
 
 			var $target = $(this.$elements.attr('data-target'));
 
